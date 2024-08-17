@@ -1,0 +1,264 @@
+/* Global Styles */
+
+:root {
+    --primary: #001027;
+    --secondary: #3cbac6;
+    --tertiary: #ebffff;
+  }
+
+  
+body {
+background:url("./images/background.png");
+background-position:center;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f7f8fc;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+header {
+    background-color: var(--primary);
+    padding: 20px 0;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+header nav ul li a {
+    color: var(--tertiary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--secondary);
+}
+
+#home {
+    background: url('./homebg.jpg');
+    color: #fff;
+    padding: 200px 0 100px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+#home .hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#home h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#home h1 span {
+    color: var(--secondary);
+}
+
+#home p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: var(--primary);
+    color: var(--tertiary);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) !important;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color:var(--secondary);
+}
+
+.section {
+    padding: 100px 0;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--primary);
+}
+
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--secondary);
+}
+
+/* Grid Container Styles */
+.team-grid, .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Team Member and Project Styles */
+.team-member, .project {
+    position: relative; /* Required for absolute positioning of overlay */
+    background-color: var(--tertiary);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.team-member:hover, .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
+}
+
+/* Image Styles */
+.team-member img, .project img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.team-member:hover img, .project:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.team-member {
+    height: 300px;
+    /* gap: 200px; */
+}
+/* Member Info (Team) */
+.member-info {
+    display: flex;
+    background: var(--primary);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    /* height: 500px !important; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.team-member:hover .member-info {
+    opacity: 1;
+}
+
+/* Heading and Paragraph Styles */
+.team-member h3, .project h3 {
+    font-size: 24px;
+    margin: 20px 0 10px;
+    color: var(--secondary);
+}
+
+.team-member p, .project p {
+    font-size: 16px;
+    color: var(--tertiary);
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+#contact button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--primary);
+    color: var(--tertiary);
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: var(--secondary);
+}
+
+footer {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
